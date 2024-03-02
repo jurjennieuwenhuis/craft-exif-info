@@ -5,13 +5,10 @@ namespace juni\exifinfo;
 use Craft;
 use craft\base\Element;
 use craft\base\Event;
-use craft\base\LocalFsInterface;
 use craft\base\Plugin as BasePlugin;
 use craft\elements\Asset;
 use craft\events\DefineHtmlEvent;
-use craft\events\DefineMetadataEvent;
 use craft\events\RegisterComponentTypesEvent;
-use craft\helpers\FileHelper;
 use craft\services\Fields;
 use juni\exifinfo\fields\ExifInfoPanelField;
 use juni\exifinfo\plugin\Services;
@@ -63,8 +60,6 @@ class ExifInfo extends BasePlugin
     public function init(): void
     {
         parent::init();
-
-        require __DIR__ . '/../vendor/autoload.php';
 
         self::$plugin = $this;
 
