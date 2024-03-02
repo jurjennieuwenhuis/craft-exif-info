@@ -1,0 +1,60 @@
+{
+  "name": "juni/craft-exif-info",
+  "description": "Show exif info for photo assets.",
+  "type": "craft-plugin",
+  "version": "1.0.0",
+  "keywords": [
+    "craft",
+    "cms",
+    "craftcms",
+    "craft-plugin",
+    "exif",
+    "exif-info"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Jurjen Nieuwenhuis",
+      "homepage": "https://www.kasanova.nl/"
+    }
+  ],
+  "extra": {
+    "handle": "juni-exif-info",
+    "name": "Exif Info",
+    "hasCpSettings": false,
+    "hasCpSection": false,
+    "developer": "Jurjen Nieuwenhuis",
+    "documentationUrl": "",
+    "class": "juni\\exifinfo\\ExifInfo"
+  },
+  "autoload": {
+    "psr-4": {
+      "juni\\exifinfo\\": "src/"
+    }
+  },
+  "require": {
+    "php": ">=8.2",
+    "miljar/php-exif": "^0.6.5"
+  },
+  "scripts": {
+    "check-cs": "ecs check --ansi",
+    "fix-cs": "ecs check --ansi --fix",
+    "phpstan": "phpstan --memory-limit=1G"
+  },
+  "config": {
+    "sort-packages": true,
+    "platform": {
+      "php": "8.2"
+    },
+    "allow-plugins": {
+      "yiisoft/yii2-composer": true,
+      "craftcms/plugin-installer": true
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require-dev": {
+    "roave/security-advisories": "dev-latest",
+    "craftcms/ecs": "dev-main"
+  }
+}

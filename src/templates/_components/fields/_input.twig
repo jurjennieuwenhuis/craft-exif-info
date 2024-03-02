@@ -1,0 +1,26 @@
+{#
+# Exif Info Panel plugin for Craft CMS 5.x
+#}
+
+<div class="exif-info-panel">
+  <dl class="exif-info-panel__list">
+    {% for name,value in data %}
+      <div class="exif-info-panel__list--item">
+        <dt class="heading">{{ name }}</dt>
+        <dd class="value">{{ value }}</dd>
+      </div>
+    {% endfor %}
+  </dl>
+</div>
+
+<h4>Raw data</h4>
+<div class="exif-info-panel">
+  <dl class="exif-info-panel__list">
+    {% for name,value in rawData %}
+      <div class="exif-info-panel__list--item">
+        <dt class="heading">{{ name }}</dt>
+        <dd class="value">{{ value }}</dd>
+      </div>
+    {% endfor %}
+  </dl>
+</div>
