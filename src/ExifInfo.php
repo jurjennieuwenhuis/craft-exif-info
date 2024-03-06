@@ -141,7 +141,7 @@ class ExifInfo extends BasePlugin
             return;
         }
 
-        if (!$this->getAssetHelper()->isJpg($event->sender)) {
+        if (!$this->getAssetHelper()->supportsExif($event->sender)) {
             return;
         }
 

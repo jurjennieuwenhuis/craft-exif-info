@@ -51,7 +51,7 @@ final class ExifInfoPanelField extends Field
             return '';
         }
 
-        if (!ExifInfo::$plugin->getAssetHelper()->isJpg($element)) {
+        if (!ExifInfo::$plugin->getAssetHelper()->supportsExif($element)) {
             return '';
         }
 

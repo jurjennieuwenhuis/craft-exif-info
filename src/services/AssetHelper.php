@@ -33,4 +33,21 @@ final class AssetHelper
     {
         return $asset->getMimeType() === 'image/jpeg';
     }
+
+    public function isMp4(Asset $asset): bool
+    {
+        return $asset->getMimeType() === 'video/mp4';
+    }
+
+    public function supportsExif(Asset $asset): bool
+    {
+        if (
+            $this->isJpg($asset) ||
+            $this->isMp4($asset)
+        ) {
+            return true;
+        }
+
+        return false;
+    }
 }
